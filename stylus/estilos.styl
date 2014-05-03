@@ -1,9 +1,10 @@
 @import "normalize.styl"
+@import "fonts.styl"
 
 //VARIABLES
 gris_oscuro = #333
 gris_claro = #818181
-
+rojo = #BD255B
 a
 	text-decoration none
 body
@@ -12,6 +13,10 @@ body
 
 figure
 	margin 0
+
+img
+	// las imagnenes dejan un espacion por debajo con esto se soluciona
+	vertical-align top
 
 .button-menu
 	position absolute
@@ -22,15 +27,37 @@ figure
 	// para que suba a la mitad 
 	margin-top -10px
 	// le quitamos -10 masomenos el tamano de la letra principal
-
+	color gris_oscuro
 .container
 	// COMO TIENE font-size 0 TAMBIEN TENEMOS QUE USAR REM
 	padding 1.4rem
 	font-size 0
 	text-align center
 
+.action
+	color white
+	margin-right .5em
+	font-size: 1.2em
+	&:last-child
+		margin-right 0
+	&.gray
+		color gris_claro
+.actions
+	position absolute
+	bottom 0
+	left 0
+	right 0
+	background rgba(black, .3)
+
+
 .border-bottom
 	border-bottom 1px solid gris_claro
+
+
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
 
 .name
 	color gris_oscuro
@@ -56,6 +83,50 @@ figure
 .relative
 	position relative
 
+.padding
+	padding 1em
+
+.padding-tb
+	padding 1em 0
+
+.progress
+	margin 1em 0 
+	position relative
+	.min
+	.max 
+		font-size .8em
+		position absolute
+		top -5px
+	.min
+		left 0
+	.max
+		right 0
+	.total
+		height: 5px
+		background gris_claro
+		width 75%
+		// margin-top 10px
+		border-radius 5px
+		margin 0 auto
+
+	.state
+		height: 5px
+		background rojo
+		width 30%
+		border-radius 5px
+		position relative
+
+	.circle
+		background gris_oscuro
+		width: 10px
+		height 10px
+		border-radius 5px
+		position absolute
+		right 0
+		top -2px
+
+.right-text
+	text-align right	
 .song
 	// tambien puedo calcular 128 entre 16 para saber cuanto es en em
 	// usamos rem para que no haga caso al container sino al padre anterior
@@ -71,7 +142,23 @@ figure
 	p
 		margin .5em 0
 
+.playing
+	&.small
+		width 20em
+ 
 
 
 
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
