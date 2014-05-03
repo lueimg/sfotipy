@@ -1,2 +1,77 @@
-h1
-	color red
+@import "normalize.styl"
+
+//VARIABLES
+gris_oscuro = #333
+gris_claro = #818181
+
+a
+	text-decoration none
+body
+	font-size 16px
+	font-family: 'Varela Round', sans-serif;
+
+figure
+	margin 0
+
+.button-menu
+	position absolute
+	left .5em
+	top 50%
+	// el top 50% colocara el a  en el medio pero empezando desdel su pie
+	// para centrarlo mejor le sacamos un margin de 10px 
+	// para que suba a la mitad 
+	margin-top -10px
+	// le quitamos -10 masomenos el tamano de la letra principal
+
+.container
+	// COMO TIENE font-size 0 TAMBIEN TENEMOS QUE USAR REM
+	padding 1.4rem
+	font-size 0
+	text-align center
+
+.border-bottom
+	border-bottom 1px solid gris_claro
+
+.name
+	color gris_oscuro
+
+.menu
+	display none
+
+
+.author
+	color gris_claro
+
+.header
+	height 3.5em
+	// a
+	// 	display none
+	.title
+		font-size: 1.1em
+		text-align center
+		margin 0
+		// LE DAMOS EL MISMO TAMANO DE SU CONTENEDOR PARA QUE SE CENTRE
+		line-height: 3.5em
+
+.relative
+	position relative
+
+.song
+	// tambien puedo calcular 128 entre 16 para saber cuanto es en em
+	// usamos rem para que no haga caso al container sino al padre anterior
+	// ya que el container se ha quedado sin size o tamano
+	width 8rem 
+	display inline-block
+	font-size 1rem
+	margin-right 1em
+	margin-bottom 1em
+	text-align left
+	&:nth-child(even)
+		margin-right 0
+	p
+		margin .5em 0
+
+
+
+
+		
