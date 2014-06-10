@@ -31,7 +31,7 @@
 		</div>
 		<a href="#" class="button-menu icon-menu"></a>
 		<nav class="menu ">
-			<ul class="list wrap center-block">
+			<ul class="wrap center-block">
 				<li class="item">
 					<a href="#">top hits</a>
 				</li>
@@ -291,9 +291,22 @@
 		</article>
 		
 	</section>
+
+<script id="song-template" type="text/x-handlebars-template">
+  				{{!-- no se agrega el li aqui ya que lo agrega directamente el view --}}
+					<span>{{name}} - {{author}}</span>
+					<span class="right">
+						
+						<a href="" class="action icon-add gray"></a>
+						<a href="" class="action icon-love gray"></a>
+						<a href="" class="action icon-share gray"></a>
+					</span>
+				
+</script>
 <script src="lib/underscore.js"></script>
 <script src="lib/jquery-1.11.1.js"></script>
 <script src="lib/backbone.js"></script>
+<script src="lib/handlebars-v1.3.0.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
